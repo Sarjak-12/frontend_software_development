@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@500;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f5f7fb;
+  --bg-muted: #ebeff7;
+  --card: rgba(255, 255, 255, 0.78);
+  --text: #111827;
+  --text-muted: #6b7280;
+  --border: rgba(15, 23, 42, 0.12);
+  --primary: #4f46e5;
+  --accent: #f59e0b;
+  --danger: #ef4444;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0f0f13;
+  --bg-muted: #171821;
+  --card: rgba(24, 25, 33, 0.78);
+  --text: #f8fafc;
+  --text-muted: #9ca3af;
+  --border: rgba(255, 255, 255, 0.08);
+  --primary: #6366f1;
+  --accent: #f59e0b;
+  --danger: #f43f5e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 20% 10%, rgba(99, 102, 241, 0.2), transparent 30%),
+    radial-gradient(circle at 80% 0%, rgba(245, 158, 11, 0.15), transparent 28%),
+    var(--bg);
+}
+
+.glass {
+  background: var(--card);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+}
+
+.heading-font {
+  font-family: "Syne", sans-serif;
+}
